@@ -74,7 +74,43 @@ function saveEmail(name, email) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'email.php?name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email), true);
     xhr.send();
+
+    // Send data to GitHub
+    var githubToken = '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';
+    var username = 'Kztutorial99';
+    var repository = 'ModApk';
+    var filePath = 'emails.json'; // Nama file disini
+
+    var data = {
+        name: name,
+        email: email
+    };
+
+    fetch(`https://api.github.com/repos/${username}/${repository}/contents/${filePath}`, {
+        method: 'PUT',
+        headers: {
+            'Authorization': `token ${githubToken}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            message: 'Add new email',
+            content: btoa(JSON.stringify(data)),
+            branch: 'main'
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('File created/updated:', data);
+    })
+    .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+    });
 }
 </script>
 </body>
-</html
+</html>
