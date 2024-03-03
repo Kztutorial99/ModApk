@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Progress Download</title>
+<title>ModMaster</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -12,105 +12,130 @@
         padding: 0;
     }
     .container {
-        max-width: 400px;
+        max-width: 600px;
         margin: 50px auto;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
-    label {
-        display: block;
-        margin-bottom: 5px;
+    h1 {
+        margin-top: 0;
     }
-    input[type="text"],
-    input[type="email"] {
-        width: calc(100% - 22px);
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+    .download-item {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        text-align: left;
     }
-    input[type="submit"] {
-        width: 100%;
-        padding: 10px;
+    .download-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .download-item h2 {
+        margin-top: 0;
+    }
+    .download-item p {
+        margin-bottom: 10px;
+    }
+    .download-button {
+        display: inline-block;
+        padding: 10px 20px;
         background-color: #007bff;
         color: #fff;
-        border: none;
+        text-decoration: none;
         border-radius: 5px;
-        cursor: pointer;
+        margin-right: 10px;
     }
-    input[type="submit"]:hover {
+    .download-button:hover {
         background-color: #0056b3;
+    }
+    .download-button.no-password {
+        background-color: #28a745;
+    }
+    .full-tutorial {
+        background-color: #ff0000;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .full-tutorial:hover {
+        background-color: #dc3545;
+    }
+    .download-button.no-password:hover {
+        background-color: #218838;
+    }
+    .youtube-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+        .download-item {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        .download-item h2 {
+            font-size: 18px;
+        }
+        .download-item p {
+            font-size: 14px;
+        }
+        .download-button {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        .youtube-icon {
+            width: 12px;
+            height: 12px;
+        }
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <form id="emailForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <input type="submit" value="Continue">
-    </form>
+    <h1>ModMaster</h1>
+    <div class="download-item">
+        <h2>Nama Aplikasi 1</h2>
+        <p>Deskripsi singkat tentang aplikasi ini.</p>
+        <p>Versi: 1.0.0</p>
+        <a href="#" class="download-button">Ber Password</a>
+        <a href="#" class="download-button no-password">No Password</a>
+        <a href="https://www.youtube.com/channel/UC6V1B1RKIp3TwLZMFkkZ2gg" class="full-tutorial">
+            <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
+            Lihat Tutorial di YouTube
+        </a>
+    </div>
+    <div class="download-item">
+        <h2>Nama Aplikasi 2</h2>
+        <p>Deskripsi singkat tentang aplikasi ini.</p>
+        <p>Versi: 2.0.0</p>
+        <a href="#" class="download-button">Ber Password</a>
+        <a href="#" class="download-button no-password">No Password</a>
+        <a href="https://www.youtube.com/channel/UC6V1B1RKIp3TwLZMFkkZ2gg" class="full-tutorial">
+            <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
+            Lihat Tutorial di YouTube
+        </a>
+    </div>
+    <div class="download-item">
+        <h2>Nama Aplikasi 3</h2>
+        <p>Deskripsi singkat tentang aplikasi ini.</p>
+        <p>Versi: 3.0.0</p>
+        <a href="#" class="download-button">Ber Password</a>
+        <a href="#" class="download-button no-password">No Password</a>
+        <a href="https://www.youtube.com/channel/UC6V1B1RKIp3TwLZMFkkZ2gg" class="full-tutorial">
+            <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
+            Lihat Tutorial di YouTube
+        </a>
+    </div>
 </div>
-
-<script>
-document.getElementById("emailForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    
-    saveEmail(name, email);
-    
-    window.location.href = "https://yourdestinationlink.com";
-});
-
-function saveEmail(name, email) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'email.php?name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email), true);
-    xhr.send();
-
-    // Send data to GitHub
-    var githubToken = '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';
-    var username = 'Kztutorial99';
-    var repository = 'ModApk';
-    var filePath = 'emails.json'; // Nama file disini
-
-    var data = {
-        name: name,
-        email: email
-    };
-
-    fetch(`https://api.github.com/repos/${username}/${repository}/contents/${filePath}`, {
-        method: 'PUT',
-        headers: {
-            'Authorization': `token ${githubToken}`,
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            message: 'Add new email',
-            content: btoa(JSON.stringify(data)),
-            branch: 'main'
-        })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('File created/updated:', data);
-    })
-    .catch(error => {
-        console.error('There was a problem with your fetch operation:', error);
-    });
-}
-</script>
 </body>
 </html>
