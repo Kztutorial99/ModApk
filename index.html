@@ -39,7 +39,9 @@
     .download-item p {
         margin-bottom: 10px;
     }
-    .download-button {
+    .download-button,
+    .youtube-button,
+    .full-tutorial {
         display: inline-block;
         padding: 10px 20px;
         background-color: #007bff;
@@ -47,33 +49,29 @@
         text-decoration: none;
         border-radius: 5px;
         margin-right: 10px;
+        margin-bottom: 10px; /* Menambahkan margin bottom untuk mencegah sentuhan antara tombol */
     }
-    .download-button:hover {
+    .download-button:hover,
+    .youtube-button:hover,
+    .full-tutorial:hover {
         background-color: #0056b3;
     }
     .download-button.no-password {
         background-color: #28a745;
     }
-    .full-tutorial {
-        background-color: #ff0000;
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .full-tutorial:hover {
-        background-color: #dc3545;
-    }
     .download-button.no-password:hover {
         background-color: #218838;
     }
     .youtube-icon {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
         margin-right: 5px;
+    }
+    .full-tutorial {
+        background-color: #ff0000; /* Mengubah warna tombol "Tutorial" */
+    }
+    .full-tutorial:hover {
+        background-color: #dc3545;
     }
     @media (max-width: 768px) {
         .container {
@@ -89,13 +87,15 @@
         .download-item p {
             font-size: 14px;
         }
-        .download-button {
+        .download-button,
+        .youtube-button,
+        .full-tutorial {
             padding: 8px 16px;
             font-size: 14px;
         }
         .youtube-icon {
-            width: 12px;
-            height: 12px;
+            width: 16px;
+            height: 16px;
         }
     }
 </style>
