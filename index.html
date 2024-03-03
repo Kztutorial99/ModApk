@@ -39,12 +39,20 @@
     .download-item p {
         margin-bottom: 10px;
     }
-    .download-button,
-    .youtube-button,
-    .full-tutorial {
+    .download-button {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: #00ff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        margin-bottom: 10px; /* Menambahkan margin bottom untuk mencegah sentuhan antara tombol */
+    }
+    .youtube-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff0000;
         color: #fff;
         text-decoration: none;
         border-radius: 5px;
@@ -52,8 +60,7 @@
         margin-bottom: 10px; /* Menambahkan margin bottom untuk mencegah sentuhan antara tombol */
     }
     .download-button:hover,
-    .youtube-button:hover,
-    .full-tutorial:hover {
+    .youtube-button:hover {
         background-color: #0056b3;
     }
     .download-button.no-password {
@@ -63,15 +70,9 @@
         background-color: #218838;
     }
     .youtube-icon {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         margin-right: 5px;
-    }
-    .full-tutorial {
-        background-color: #ff0000; /* Mengubah warna tombol "Tutorial" */
-    }
-    .full-tutorial:hover {
-        background-color: #dc3545;
     }
     @media (max-width: 768px) {
         .container {
@@ -88,8 +89,7 @@
             font-size: 14px;
         }
         .download-button,
-        .youtube-button,
-        .full-tutorial {
+        .youtube-button {
             padding: 8px 16px;
             font-size: 14px;
         }
@@ -109,9 +109,8 @@
         <p>Versi: 1.0.0</p>
         <a href="#" class="download-button">Ber Password</a>
         <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/channel/UC6V1B1RKIp3TwLZMFkkZ2gg" class="full-tutorial">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="youtube-button">
             <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
-            Tutorial
         </a>
     </div>
     <div class="download-item">
@@ -120,9 +119,8 @@
         <p>Versi: 2.0.0</p>
         <a href="#" class="download-button">Ber Password</a>
         <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/channel/UC6V1B1RKIp3TwLZMFkkZ2gg" class="full-tutorial">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="youtube-button">
             <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
-            Tutorial
         </a>
     </div>
     <div class="download-item">
@@ -131,9 +129,8 @@
         <p>Versi: 3.0.0</p>
         <a href="#" class="download-button">Ber Password</a>
         <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/channel/UC6V1B1RKIp3TwLZMFkkZ2gg" class="full-tutorial">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="youtube-button">
             <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
-            Tutorial
         </a>
     </div>
 </div>
