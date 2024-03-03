@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ModMaster</title>
+<title>ModMaster Apk</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -49,8 +49,7 @@
         margin-right: 10px;
         margin-bottom: 10px;    
     }
-    .download-button:hover,
-    .youtube-button:hover {
+    .download-button:hover {
         background-color: #0056b3;
     }
     .download-button.no-password {
@@ -59,10 +58,22 @@
     .download-button.no-password:hover {
         background-color: #218838;
     }
-    .youtube-icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
+    .tutorial-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 10px;    
+    }
+    .tutorial-button:hover {
+        background-color: #dc3545;
+    }
+    .apk-logo {
+        width: 50px; /* Sesuaikan ukuran logo APK */
+        vertical-align: middle;
+        margin-right: 10px;
     }
     @media (max-width: 768px) {
         .container {
@@ -79,49 +90,42 @@
             font-size: 14px;
         }
         .download-button,
-        .youtube-button {
+        .tutorial-button {
             padding: 8px 16px;
             font-size: 14px;
-        }
-        .youtube-icon {
-            width: 26px;
-            height: 26px;
         }
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <h1>ModMaster</h1>
+    <h1>ModMaster Apk</h1>
     <div class="download-item">
-        <h2>Nama Aplikasi 1</h2>
-        <p>Deskripsi singkat tentang aplikasi ini.</p>
-        <p>Versi: 1.0.0</p>
+        <img src="Zarchiver.png" alt="APK Logo" class="apk-logo">
+        <h2>Zarchiver Pro</h2>
+        <p>ZArchiver Pro adalah aplikasi manajemen arsip yang kuat untuk penggunaan pada perangkat mobile.</p>
+        <p>Versi: 1.0.9</p>
         <a href="#" class="download-button">Ber Password</a>
         <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="youtube-button">
-            <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
-        </a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="tutorial-button">Tutorial</a>
     </div>
     <div class="download-item">
+        <img src="apk_logo.png" alt="APK Logo" class="apk-logo">
         <h2>Nama Aplikasi 2</h2>
         <p>Deskripsi singkat tentang aplikasi ini.</p>
         <p>Versi: 2.0.0</p>
         <a href="#" class="download-button">Ber Password</a>
         <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="youtube-button">
-            <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
-        </a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="tutorial-button">Tutorial</a>
     </div>
     <div class="download-item">
+        <img src="apk_logo.png" alt="APK Logo" class="apk-logo">
         <h2>Nama Aplikasi 3</h2>
         <p>Deskripsi singkat tentang aplikasi ini.</p>
         <p>Versi: 3.0.0</p>
         <a href="#" class="download-button">Ber Password</a>
         <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="youtube-button">
-            <img class="youtube-icon" src="youtube_icon.png" alt="YouTube Icon">
-        </a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="tutorial-button">Tutorial</a>
     </div>
 </div>
 </body>
