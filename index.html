@@ -3,130 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ModMaster Apk</title>
+<title>Email Input Form</title>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
+        background-color: #f4f4f4;
     }
-    .container {
-        max-width: 600px;
-        margin: 50px auto;
+    #emailFormContainer {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #emailForm {
+        text-align: center;
         background-color: #fff;
         padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    h1 {
-        margin-top: 0;
-    }
-    .download-item {
-        margin-bottom: 40px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 20px;
-        text-align: left;
-    }
-    .download-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-    }
-    .download-item h2 {
-        margin-top: 0;
-    }
-    .download-item p {
+    #email {
+        width: 300px;
+        padding: 10px;
         margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
     }
-    .download-button {
-        display: inline-block;
+    #continueBtn {
         padding: 10px 20px;
         background-color: #007bff;
         color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-right: 10px;
-        margin-bottom: 10px;    
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
     }
-    .download-button:hover {
-        background-color: #0056b3;
-    }
-    .download-button.no-password {
-        background-color: #28a745;
-    }
-    .download-button.no-password:hover {
-        background-color: #218838;
-    }
-    .tutorial-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff0000;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-bottom: 10px;    
-    }
-    .tutorial-button:hover {
-        background-color: #dc3545;
-    }
-    .apk-logo {
-        width: 50px; /* Sesuaikan ukuran logo APK */
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-    @media (max-width: 768px) {
-        .container {
-            padding: 10px;
-        }
-        .download-item {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-        }
-        .download-item h2 {
-            font-size: 18px;
-        }
-        .download-item p {
-            font-size: 14px;
-        }
-        .download-button,
-        .tutorial-button {
-            padding: 8px 16px;
-            font-size: 14px;
-        }
+    #countdown {
+        margin-top: 20px;
+        font-size: 18px;
     }
 </style>
 </head>
 <body>
-<div class="container">
-    <h1>ModMaster Apk</h1>
-    <div class="download-item">
-        <img src="Zarchiver.png" alt="APK Logo" class="apk-logo">
-        <h2>Zarchiver Mod</h2>
-        <p>ZArchiver Pro adalah aplikasi manajemen arsip yang kuat untuk penggunaan pada perangkat mobile.</p>
-        <p>Versi: 1.0.9</p>
-        <a href="https://sfl.gl/BfYg" class="download-button">Ber Password</a>
-        <a href="https://www.subs4unlock.id/nnoCFc" class="download-button no-password">No Password</a>
-        <a href="https://youtu.be/q4YdR4Hm6SY" class="tutorial-button">Tutorial</a>
+    <div id="emailFormContainer">
+        <form id="emailForm" action="/submit_email" method="POST">
+            <strong><h1>Login Access File</h1></strong><br><br>
+            <strong><label for="email">Email:</label></strong><br><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Continue" id="continueBtn">
+        </form>
+        <div id="countdown" style="display: none;"></div>
     </div>
-    <div class="download-item">
-        <img src="Capcut.png" alt="APK Logo" class="apk-logo">
-        <h2>Capcut Mod</h2>
-        <p>Deskripsi singkat tentang aplikasi ini.</p>
-        <p>Versi: 1.11.2</p>
-        <a href="#" class="download-button">Ber Password</a>
-        <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="tutorial-button">Tutorial</a>
-    </div>
-    <div class="download-item">
-        <img src="Termux.png" alt="APK Logo" class="apk-logo">
-        <h2>Termux Mod</h2>
-        <p>Deskripsi singkat tentang aplikasi ini.</p>
-        <p>Versi: 1.22.9</p>
-        <a href="#" class="download-button">Ber Password</a>
-        <a href="#" class="download-button no-password">No Password</a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="tutorial-button">Tutorial</a>
-    </div>
-</div>
+    <script>
+        function startCountdown() {
+            var countdownElement = document.getElementById('countdown');
+            countdownElement.style.display = 'block';
+            var seconds = 10;
+            var countdownInterval = setInterval(function() {
+                countdownElement.innerText = 'Redirecting in ' + seconds + ' seconds';
+                seconds -= 1;
+                if (seconds < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://justpaste.it/ZarchiverPro';
+                }
+            }, 1000);
+        }
+        
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value.trim();
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(email)) {
+                document.getElementById('continueBtn').disabled = true;
+                startCountdown();
+                fetch('/submit_email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(data) {
+                    console.log(data);
+                }).catch(function(error) {
+                    console.error('Error:', error);
+                });
+            } else {
+                alert('Invalid email address. Please enter a valid email.');
+            }
+        });
+
+        // Reload page if user goes back to email input page
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
 </body>
 </html>
